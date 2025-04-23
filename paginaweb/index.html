@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Educativa - IES Isabel de Villena</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagenes/logo_gva.png" alt="Generalitat Valenciana" class="logo">
+            <img src="imagenes/logo_ministerio.png" alt="Ministerio de España" class="logo">
+            <img src="imagenes/logo_instituto.png" alt="IES Isabel de Villena" class="logo">
+        </div>
+        <h1>Plataforma Educativa de Database Management y Redes</h1>
+        <p>Formación especializada en gestión de bases de datos y redes</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bienvenido/a a nuestra plataforma</h2>
+                <p>Accede a cursos especializados con materiales interactivos y soporte personalizado</p>
+                
+                <div class="buttons">
+                    <a href="registro.php" class="btn btn-register">Registrarse</a>
+                    <a href="login.php" class="btn btn-login">Iniciar Sesión</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Cursos en Database Management</h3>
+                <p>Domina SQL, MySQL y diseño de bases de datos relacionales</p>
+            </div>
+            <div class="feature">
+                <h3>Planificacion y administracion de redes</h3>
+                <p>Aprende configuración de redes, VLANs y seguridad básica</p>
+            </div>
+            <div class="feature">
+                <h3>Materiales en Markdown</h3>
+                <p>Contenidos técnicos con ejemplos interactivos de código</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Plataforma desarrollada por <strong>Said Rais</strong> - 1ASIR</p>
+            <p>IES Isabel de Villena - Curso 2023/2024</p>
+        </div>
+    </footer>
+    <script>
+// Aplica a todos los formularios
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function() {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.classList.add('btn-loading');
+            btn.disabled = true;
+        }
+    });
+});
+</script>
+</body>
+</html>
