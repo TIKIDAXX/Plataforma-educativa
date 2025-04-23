@@ -4,11 +4,13 @@
 # =============================================
 
 # 1. Crear estructura de directorios
+echo "📂 Creando estructura de backups..."
 sudo mkdir -p /backups/{diarios,semanales,logs}
 sudo chmod -R 700 /backups
 
 # 2. Script de backup para MySQL (solo en servidor DB)
 if which mysql >/dev/null; then
+    echo "💾 Creando script de backup para MySQL..."
     sudo tee /usr/local/bin/backup_db.sh > /dev/null <<'EOL'
 #!/bin/bash
 DATE=$(date +%Y%m%d)
@@ -21,6 +23,7 @@ fi
 
 # 3. Script de backup para contenidos (solo en servidor web)
 if [ -d "/var/www" ]; then
+    echo "🌐 Creando script de backup para Apache..."
     sudo tee /usr/local/bin/backup_web.sh > /dev/null <<'EOL'
 #!/bin/bash
 DATE=$(date +%Y%m%d)
@@ -32,6 +35,7 @@ EOL
 fi
 
 # 4. Configurar cron jobs
+echo "⏰ Configurando tareas programadas..."
 sudo tee /etc/cron.d/plataforma_backups > /dev/null <<EOL
 # Backup diario de DB (2 AM)
 0 2 * * * root /usr/local/bin/backup_db.sh >> /backups/logs/db_$(date +\%Y\%m\%d).log 2>&1
@@ -43,4 +47,4 @@ sudo tee /etc/cron.d/plataforma_backups > /dev/null <<EOL
 0 4 * * 0 root tar -czf /backups/semanales/full_$(date +\%Y\%m\%d).tar.gz /backups/diarios
 EOL
 
-echo "✅ Sistema de backups configurado"
+echo "✅ Sistema de backups configurado con éxito!"
