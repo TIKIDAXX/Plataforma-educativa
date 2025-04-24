@@ -19,8 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user_type'] = $user['tipo'];
         $_SESSION['user_name'] = $user['nombre'];
         
-        // Redirigir a la página de cursos
-        header("Location: cursos.php");
+        // Redirigir según el tipo de usuario
+        if ($user['id'] === 10) {
+            header("Location: admin_cursos.php");
+        } else {
+            header("Location: cursos.php");
+        }
         exit();
     } else {
         $error = "Email o contraseña incorrectos";
