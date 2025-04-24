@@ -1,3 +1,4 @@
 admin data 
 email :admin@estudial.com
 contrasena :adminadmin
+hay que configurar la id en conf/db.php que sea compatible con la de admin en la tabla de datos de usuarios
