@@ -11,8 +11,9 @@ BEGIN
 EXCEPTION
     -- Exception handling
 END;
-Example: Stored Procedure
-
+```
+**Example: Stored Procedure**
+```sql
 CREATE OR REPLACE PROCEDURE UpdateSalary(
     emp_id IN NUMBER,
     increase_pct IN NUMBER
@@ -31,8 +32,9 @@ EXCEPTION
     WHEN NO_DATA_FOUND THEN
         DBMS_OUTPUT.PUT_LINE('Employee not found');
 END UpdateSalary;
-Example: Trigger
-
+```
+**Example: Trigger**
+```sql
 CREATE OR REPLACE TRIGGER audit_employee_changes
 BEFORE UPDATE OR DELETE ON employees
 FOR EACH ROW
@@ -51,11 +53,13 @@ BEGIN
         :NEW.salary
     );
 END;
-Exercise 6.1: Create a PL/SQL function that calculates the total sales for a given product ID.
+```
+**Exercise 6.1**: Create a PL/SQL function that calculates the total sales for a given product ID.
 
 <details> 
 <summary>Solution</summary>
 
+```sql
 CREATE OR REPLACE FUNCTION GetProductSales(
     p_product_id IN NUMBER
 ) RETURN NUMBER IS
@@ -71,4 +75,5 @@ EXCEPTION
     WHEN OTHERS THEN
         RETURN 0;
 END GetProductSales;
-</details> ```
+```
+</details>

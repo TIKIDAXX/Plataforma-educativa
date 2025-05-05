@@ -1,4 +1,4 @@
- 4. SQL with Examples
+## 4. SQL with Examples
 
 SQL (Structured Query Language) is used to manage relational databases.
 
@@ -11,24 +11,23 @@ CREATE TABLE Students (
     Name VARCHAR(50) NOT NULL,
     Email VARCHAR(100) UNIQUE,
     EnrollmentDate DATE DEFAULT CURRENT_DATE
-);
-INSERT:
-
-
+);```
+**INSERT:**
+```sql
 INSERT INTO Students (StudentID, Name, Email)
 VALUES (1, 'John Doe', 'john@example.com');
-SELECT:
-
-
+```
+**SELECT:**
+```sql
 SELECT * FROM Students;
 SELECT Name, Email FROM Students WHERE StudentID = 1;
-UPDATE:
-
-
+```
+**UPDATE:**
+```sql
 UPDATE Students SET Email = 'john.doe@example.com' WHERE StudentID = 1;
-DELETE:
-
-
+```
+**DELETE:**
+```sql
 DELETE FROM Students WHERE StudentID = 1;
 ```
 **Exercise 4.1**: Write SQL to create tables for the library system from Exercise 2.1 and insert sample data.

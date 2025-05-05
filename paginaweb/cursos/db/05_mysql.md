@@ -17,22 +17,24 @@ CREATE TABLE Users (
     UserID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     Username VARCHAR(50)
 );
-String Comparison:
-
+```
+2. **String Comparison:**
+```
 MySQL is case-insensitive by default
 
 Standard SQL is case-sensitive
+```
+3. **LIMIT vs FETCH:**
 
-LIMIT vs FETCH:
-
-
+```sql
 -- MySQL
 SELECT * FROM Products LIMIT 10 OFFSET 5;
 
 -- Standard SQL
 SELECT * FROM Products OFFSET 5 ROWS FETCH NEXT 10 ROWS ONLY;
-Date Functions:
-
+```
+4. **Date Functions:**
+```sql
 
 -- MySQL
 SELECT NOW(), CURDATE();
@@ -40,7 +42,7 @@ SELECT NOW(), CURDATE();
 -- Standard SQL
 SELECT CURRENT_TIMESTAMP, CURRENT_DATE;
 ```
-Exercise 5.1: Convert this standard SQL to MySQL:
+**Exercise 5.1**: Convert this standard SQL to MySQL:
 
 ```sql
 SELECT ProductName, UnitPrice 

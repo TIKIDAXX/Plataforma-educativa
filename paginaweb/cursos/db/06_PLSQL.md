@@ -11,8 +11,9 @@ BEGIN
 EXCEPTION
     -- Exception handling
 END;
-Example: Stored Procedure
-
+```
+**Example: Stored Procedure**
+```sql
 CREATE OR REPLACE PROCEDURE UpdateSalary(
     emp_id IN NUMBER,
     increase_pct IN NUMBER
@@ -31,8 +32,9 @@ EXCEPTION
     WHEN NO_DATA_FOUND THEN
         DBMS_OUTPUT.PUT_LINE('Employee not found');
 END UpdateSalary;
-Example: Trigger
-
+```
+**Example: Trigger**
+```sql
 CREATE OR REPLACE TRIGGER audit_employee_changes
 BEFORE UPDATE OR DELETE ON employees
 FOR EACH ROW
