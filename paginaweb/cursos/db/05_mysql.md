@@ -39,19 +39,24 @@ SELECT NOW(), CURDATE();
 
 -- Standard SQL
 SELECT CURRENT_TIMESTAMP, CURRENT_DATE;
+```
 Exercise 5.1: Convert this standard SQL to MySQL:
 
-
+```
 SELECT ProductName, UnitPrice 
 FROM Products 
 WHERE UnitPrice > 100 
 ORDER BY ProductName 
-OFFSET 10 ROWS FETCH NEXT 5 ROWS ONLY;```
-<details> <summary>Solution</summary>
+OFFSET 10 ROWS FETCH NEXT 5 ROWS ONLY;
+```
+<details> 
+<summary>Solution</summary>
 
+```
 SELECT ProductName, UnitPrice 
 FROM Products 
 WHERE UnitPrice > 100 
 ORDER BY ProductName 
 LIMIT 5 OFFSET 10;
+```
 </details> 
