@@ -36,7 +36,7 @@ DELETE FROM Students WHERE StudentID = 1;
 <details>
 <summary>Solution</summary>
 
-```
+```sql
 CREATE TABLE Book (
     ISBN VARCHAR(20) PRIMARY KEY,
     Title VARCHAR(100) NOT NULL,
