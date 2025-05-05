@@ -42,7 +42,7 @@ SELECT CURRENT_TIMESTAMP, CURRENT_DATE;
 ```
 Exercise 5.1: Convert this standard SQL to MySQL:
 
-```
+```sql
 SELECT ProductName, UnitPrice 
 FROM Products 
 WHERE UnitPrice > 100 
@@ -52,7 +52,7 @@ OFFSET 10 ROWS FETCH NEXT 5 ROWS ONLY;
 <details> 
 <summary>Solution</summary>
 
-```
+```sql
 SELECT ProductName, UnitPrice 
 FROM Products 
 WHERE UnitPrice > 100 
