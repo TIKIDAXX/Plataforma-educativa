@@ -3,7 +3,7 @@
 PL/SQL is Oracle's procedural extension to SQL.
 
 ### Basic Structure
-```
+```sql
 DECLARE
     -- Variable declarations
 BEGIN
@@ -57,7 +57,7 @@ END;
 <details> 
 <summary>Solution</summary>
 
-```
+```sql
 CREATE OR REPLACE FUNCTION GetProductSales(
     p_product_id IN NUMBER
 ) RETURN NUMBER IS
