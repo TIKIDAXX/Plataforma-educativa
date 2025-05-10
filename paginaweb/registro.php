@@ -23,6 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $stmt = $pdo->prepare("INSERT INTO usuarios (nombre, apellidos, email, password, tipo) VALUES (?, ?, ?, ?, ?)");
             $stmt->execute([$nombre, $apellidos, $email, $passwordHash, $tipo]);
+            // Enviar notificación por correo
+$to = 'hap.mestre77@gmail.com'; // Cambia esto a tu correo real
+$subject = '📥 Nuevo registro en la plataforma';
+$message = "Nuevo usuario registrado:\n\nNombre: $nombre $apellidos\nEmail: $email\nTipo: $tipo";
+$headers = 'From: notificaciones@tusitio.com' . "\r\n" .
+           'Reply-To: notificaciones@tusitio.com' . "\r\n" .
+           'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+
             
             // Redirigir al login
             header("Location: login.php?registro=exito");
