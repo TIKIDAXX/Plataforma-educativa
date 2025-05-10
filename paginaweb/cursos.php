@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config/test-db.php';
+require 'config/db.php';
 
 // Verificar sesión
 if (!isset($_SESSION['user_id'])) {
