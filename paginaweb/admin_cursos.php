@@ -6,14 +6,6 @@ require 'config/db.php';
 if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] !== 3) {
     header("Location: login.php");
     exit();
-}<?php
-session_start();
-require 'config/db.php';
-
-// Verificar si es admin
-if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] !== 10) {
-    header("Location: login.php");
-    exit();
 }
 
 // Procesar formulario para añadir cursos
