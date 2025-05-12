@@ -64,10 +64,11 @@ Direccionamiento IP:
 **1. ¿Qué capas del modelo OSI están involucradas en una conexión HTTP?**  
 <details>
 <solucion>Capas 7 (Aplicación), 4 (Transporte), 3 (Red), 2 (Enlace de datos), 1 (Física).</solucion>
+</details>
 
 **2. Divide la red 192.168.1.0/24 en 4 subredes. ¿Cuál es el rango de la segunda subred?**  
 <solucion>Subred 2: 192.168.1.64/26 → Rango: 192.168.1.64 - 192.168.1.127</solucion>
 
 **3. ¿Qué diferencia hay entre un switch y un hub?**  
 <solucion>El switch reenvía tramas solo al puerto destino usando la MAC. El hub transmite por todos los puertos.</solucion>
-</details>
+
