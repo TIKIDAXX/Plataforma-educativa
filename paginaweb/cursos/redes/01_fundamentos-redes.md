@@ -70,14 +70,14 @@ Direccionamiento IP:
 
 
 **2. Divide la red 192.168.1.0/24 en 4 subredes. ¿Cuál es el rango de la segunda subred?**  
-<solucion>
-s
+<details>
 <summary>Solucion</summary>
 Subred 2: 192.168.1.64/26 → Rango: 192.168.1.64 - 192.168.1.127
-</solucion>
+</details>
 
 **3. ¿Qué diferencia hay entre un switch y un hub?**  
-<solucion>
+<details>
 <summary>Solucion</summary>
-El switch reenvía tramas solo al puerto destino usando la MAC. El hub transmite por todos los puertos.</solucion>
+El switch reenvía tramas solo al puerto destino usando la MAC. El hub transmite por todos los puertos.
+</details>
 
