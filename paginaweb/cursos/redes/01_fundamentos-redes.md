@@ -38,6 +38,7 @@ Direccionamiento IP:
 ## Diagrama OSI vs TCP/IP
 
 +--------------------+ +-----------------+
+
 | OSI Model | | TCP/IP Model |
 
 +--------------------+ +-----------------+
