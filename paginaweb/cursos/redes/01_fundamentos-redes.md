@@ -41,6 +41,7 @@ Direccionamiento IP:
 | OSI Model | | TCP/IP Model |
 
 +--------------------+ +-----------------+
+
 | 7. Aplicación | --> | Aplicación |
 
 | 6. Presentación | | |
