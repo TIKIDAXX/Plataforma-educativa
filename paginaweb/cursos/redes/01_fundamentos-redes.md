@@ -62,9 +62,12 @@ Direccionamiento IP:
 ## Ejercicios
 
 **1. ¿Qué capas del modelo OSI están involucradas en una conexión HTTP?**  
-<solucion>
-<details>Capas 7 (Aplicación), 4 (Transporte), 3 (Red), 2 (Enlace de datos), 1 (Física).</details>
-</solucion>
+
+<details>
+  <summary>Solucion</summary>
+  Capas 7 (Aplicación), 4 (Transporte), 3 (Red), 2 (Enlace de datos), 1 (Física).
+</details>
+
 
 **2. Divide la red 192.168.1.0/24 en 4 subredes. ¿Cuál es el rango de la segunda subred?**  
 <solucion>Subred 2: 192.168.1.64/26 → Rango: 192.168.1.64 - 192.168.1.127</solucion>
