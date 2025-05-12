@@ -39,14 +39,22 @@ Direccionamiento IP:
 
 +--------------------+ +-----------------+
 | OSI Model | | TCP/IP Model |
+
 +--------------------+ +-----------------+
 | 7. Aplicación | --> | Aplicación |
+
 | 6. Presentación | | |
+
 | 5. Sesión | | |
+
 | 4. Transporte | --> | Transporte |
+
 | 3. Red | --> | Internet |
+
 | 2. Enlace de Datos | --> | Acceso a red |
+
 | 1. Física | | |
+
 +--------------------+ +-----------------+
 
 ## Ejercicios
